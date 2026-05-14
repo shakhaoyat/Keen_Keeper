@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Marcus Webb",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "marcus.webb@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend", "hiking"],
+    "bio": "Met freshman year in the dorms. We road-tripped across three states after graduation. He's now an architect in Portland — always building something new.",
+    "goal": 14,
+    "next_due_date": "2025-07-08"
+  },
+  {
+    "id": 2,
+    "name": "Priya Nair",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "priya.nair@outlook.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["work", "mentor", "book club"],
+    "bio": "Former manager who became a genuine friend. She recommended the book that changed how I think about careers. We trade reading lists every month.",
+    "goal": 21,
+    "next_due_date": "2025-07-28"
+  },
+  {
+    "id": 3,
+    "name": "Daniel Osei",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "email": "d.osei@protonmail.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["childhood", "gaming", "close friend"],
+    "bio": "We've known each other since third grade. Grew up on the same street. He lives in London now but we still play games online every couple of weeks.",
+    "goal": 14,
+    "next_due_date": "2025-07-14"
+  },
+  {
+    "id": 4,
+    "name": "Sofia Martínez",
+    "picture": "https://randomuser.me/api/portraits/women/63.jpg",
+    "email": "sofia.martinez@yahoo.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["travel", "photography", "college"],
+    "bio": "We bonded over a study abroad program in Spain. She's a travel photographer now — her Instagram is stunning. I always mean to call more often.",
+    "goal": 21,
+    "next_due_date": "2025-06-22"
+  },
+  {
+    "id": 5,
+    "name": "James Callahan",
+    "picture": "https://randomuser.me/api/portraits/men/54.jpg",
+    "email": "jamescallahan@icloud.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["neighbor", "fitness", "close friend"],
+    "bio": "Neighbor turned best friend. We train for half-marathons together. He's the person I call when something goes wrong — always picks up.",
+    "goal": 7,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 6,
+    "name": "Aisha Okonkwo",
+    "picture": "https://randomuser.me/api/portraits/women/29.jpg",
+    "email": "aisha.ok@gmail.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["family friend", "art", "creative"],
+    "bio": "Our families were close growing up. She's a ceramic artist in Brooklyn and one of the most thoughtful people I know. I've been terrible at keeping in touch.",
+    "goal": 30,
+    "next_due_date": "2025-06-10"
+  },
+  {
+    "id": 7,
+    "name": "Ryan Nguyen",
+    "picture": "https://randomuser.me/api/portraits/men/17.jpg",
+    "email": "ryan.nguyen.dev@gmail.com",
+    "days_since_contact": 8,
+    "status": "on-track",
+    "tags": ["tech", "work", "startup"],
+    "bio": "Met at a hackathon five years ago. We've collaborated on side projects ever since. He just launched his second startup — always has something cooking.",
+    "goal": 14,
+    "next_due_date": "2025-07-17"
+  },
+  {
+    "id": 8,
+    "name": "Leila Ahmadi",
+    "picture": "https://randomuser.me/api/portraits/women/81.jpg",
+    "email": "leila.ahmadi@hotmail.com",
+    "days_since_contact": 19,
+    "status": "almost due",
+    "tags": ["college", "cooking", "close friend"],
+    "bio": "Roommates for two years in college. She taught me how to actually cook. Now she runs a small catering business. We try to do a video call dinner once a month.",
+    "goal": 21,
+    "next_due_date": "2025-07-22"
+  }
+]
