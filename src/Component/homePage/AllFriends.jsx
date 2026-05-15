@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import { Link } from 'react-router';
 
 const friendsPromise = fetch('/friends.json').then(res => res.json());
 
@@ -14,7 +15,7 @@ const AllFriends = () => {
       return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6 border-t container mx-auto" >
                   {friends.map(friend => (
-                        <div className="card w-full bg-base-100 shadow-md border border-base-200">
+                        <Link to={`/frienddetails/${friend.id}`} key={friend.id} className="card w-full bg-base-100 shadow-md border border-base-200">
                               <div className="card-body items-center text-center">
 
                                     <div className="avatar">
@@ -47,7 +48,7 @@ const AllFriends = () => {
                                     </div>
 
                               </div>
-                        </div>
+                        </Link>
                   ))}
             </div>
       );
