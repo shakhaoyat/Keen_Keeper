@@ -1,10 +1,11 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { BiMessageDots } from 'react-icons/bi';
 import { FiPhoneCall } from 'react-icons/fi';
 import { GoDeviceCameraVideo } from 'react-icons/go';
 import { HiOutlineArchiveBox, HiOutlineBellSnooze } from 'react-icons/hi2';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { useParams } from 'react-router';
+import { toast } from 'react-toastify';
 
 
 const friendsPromise = fetch('/friends.json').then(res => res.json());
@@ -21,6 +22,45 @@ const FriendDetails = () => {
             'almost due': 'badge badge-warning badge-sm text-white px-4 py-3',
             'on-track': 'badge bg-green-800 text-white badge-sm border-none px-4 py-3',
       };
+
+      const [storedCalls, setStoredCalls] = useState([]);
+      const [storedTexts, setStoredTexts] = useState([]);
+      const [storedVideos, setStoredVideos] = useState([]);
+      const handleCall = (id) => {
+            const isExistCall = storedCalls.find(call => call.id === id);
+            if (isExistCall) {
+                  toast.error('You have already called this friend!');
+                  return;
+            } else {
+                  setStoredCalls([...storedCalls, { id }]);
+                  toast.success('Call initiated!');
+            }
+
+      }
+
+      const handleText = (id) => {
+            const isExistText = storedTexts.find(text => text.id === id);
+            if (isExistText) {
+                  toast.error('You have already texted this friend!');
+                  return;
+            } else {
+                  setStoredTexts([...storedTexts, { id }]);
+                  toast.success('Text initiated!');
+            }
+
+      }
+      const handleVideo = (id) => {
+
+            const isExistVideo = storedVideos.find(video => video.id === id);
+            if (isExistVideo) {
+                  toast.error('You have already video called this friend!');
+                  return;
+            } else {
+                  setStoredVideos([...storedVideos, { id }]);
+                  toast.success('Video call initiated!');
+            }
+      }
+
 
       return (
             <div className="container mx-auto py-6">
@@ -150,18 +190,18 @@ const FriendDetails = () => {
 
                                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
-                                                      <button className="btn bg-gray-100 h-20 flex-col">
+                                                      <button className="btn bg-gray-100 h-20 flex-col" onClick={() => handleCall(expectedFriend.id)}>
                                                             <FiPhoneCall />
 
                                                             <span>Call</span>
                                                       </button>
 
-                                                      <button className="btn bg-gray-100 h-20 flex-col">
+                                                      <button className="btn bg-gray-100 h-20 flex-col" onClick={() => handleText(expectedFriend.id)}>
                                                             <BiMessageDots />
                                                             <span>Text</span>
                                                       </button>
 
-                                                      <button className="btn bg-gray-100 h-20 flex-col">
+                                                      <button className="btn bg-gray-100 h-20 flex-col" onClick={() => handleVideo(expectedFriend.id)}>
                                                             <GoDeviceCameraVideo />
 
                                                             <span>Video</span>
