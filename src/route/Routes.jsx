@@ -6,6 +6,7 @@ import HomePage from '../pages/homePage';
 import TimeLine from '../pages/timeLine';
 import Status from '../pages/status';
 import FriendDetails from '../Component/friendDetails/FriendDetails';
+import Error from '../pages/Error';
 
 
 export const router = createBrowserRouter([
@@ -31,7 +32,9 @@ export const router = createBrowserRouter([
         element: <FriendDetails />
       },
     ],
+    errorElement: <Error />
   },
+
 ]);
 
 // const root = document.getElementById("root");
