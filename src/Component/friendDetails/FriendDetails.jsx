@@ -1,4 +1,9 @@
 import React, { use } from 'react';
+import { BiMessageDots } from 'react-icons/bi';
+import { FiPhoneCall } from 'react-icons/fi';
+import { GoDeviceCameraVideo } from 'react-icons/go';
+import { HiOutlineArchiveBox, HiOutlineBellSnooze } from 'react-icons/hi2';
+import { RiDeleteBin6Line } from 'react-icons/ri';
 import { useParams } from 'react-router';
 
 
@@ -74,41 +79,41 @@ const FriendDetails = () => {
                                     </div>
 
                                     {/* Action Buttons */}
-                                    <button className="btn btn-outline w-full justify-start">
-                                          🔔 Snooze 2 Weeks
+                                    <button className="btn w-full justify-center">
+                                          <HiOutlineBellSnooze /> Snooze 2 Weeks
                                     </button>
 
-                                    <button className="btn btn-outline w-full justify-start">
-                                          📥 Archive
+                                    <button className="btn  w-full justify-center">
+                                          <HiOutlineArchiveBox /> Archive
                                     </button>
 
-                                    <button className="btn btn-outline btn-error w-full justify-start">
-                                          🗑 Delete
+                                    <button className="btn  text-red-500 w-full justify-center">
+                                          <RiDeleteBin6Line /> Delete
                                     </button>
                               </div>
 
                               {/* Right Content */}
-                              <div className="lg:col-span-2 space-y-4">
+                              <div className="lg:col-span-2 justify-center space-y-16">
 
                                     {/* Stats */}
-                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 ">
 
-                                          <div className="stat bg-base-100 shadow border border-base-300 rounded-box">
-                                                <div className="stat-value text-success text-3xl">{expectedFriend.days_since_contact}</div>
+                                          <div className=" stat bg-base-100 shadow border border-base-300 rounded-box">
+                                                <div className="stat-value text-accent-content text-3xl text-center">{expectedFriend.days_since_contact}</div>
                                                 <div className="stat-desc text-center">
                                                       Days Since Contact
                                                 </div>
                                           </div>
 
                                           <div className="stat bg-base-100 shadow border border-base-300 rounded-box">
-                                                <div className="stat-value text-success text-3xl">{expectedFriend.goal}</div>
+                                                <div className="stat-value text-accent-content text-3xl text-center">{expectedFriend.goal}</div>
                                                 <div className="stat-desc text-center">
                                                       Goal (Days)
                                                 </div>
                                           </div>
 
                                           <div className="stat bg-base-100 shadow border border-base-300 rounded-box">
-                                                <div className="stat-value text-success text-2xl">
+                                                <div className="stat-value text-accent-content text-2xl text-center">
                                                       {expectedFriend.next_due_date}
                                                 </div>
                                                 <div className="stat-desc text-center">
@@ -145,18 +150,20 @@ const FriendDetails = () => {
 
                                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
-                                                      <button className="btn btn-outline h-20 flex-col">
-                                                            📞
+                                                      <button className="btn bg-gray-100 h-20 flex-col">
+                                                            <FiPhoneCall />
+
                                                             <span>Call</span>
                                                       </button>
 
-                                                      <button className="btn btn-outline h-20 flex-col">
-                                                            💬
+                                                      <button className="btn bg-gray-100 h-20 flex-col">
+                                                            <BiMessageDots />
                                                             <span>Text</span>
                                                       </button>
 
-                                                      <button className="btn btn-outline h-20 flex-col">
-                                                            🎥
+                                                      <button className="btn bg-gray-100 h-20 flex-col">
+                                                            <GoDeviceCameraVideo />
+
                                                             <span>Video</span>
                                                       </button>
 
