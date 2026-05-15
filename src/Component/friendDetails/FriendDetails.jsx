@@ -1,12 +1,12 @@
-import React, { use, useState } from 'react';
+import React, { use, useContext, useState } from 'react';
 import { BiMessageDots } from 'react-icons/bi';
 import { FiPhoneCall } from 'react-icons/fi';
 import { GoDeviceCameraVideo } from 'react-icons/go';
 import { HiOutlineArchiveBox, HiOutlineBellSnooze } from 'react-icons/hi2';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { useParams } from 'react-router';
-import { toast } from 'react-toastify';
 
+import { FriendContext } from '../context/FriendContext';
 
 const friendsPromise = fetch('/friends.json').then(res => res.json());
 
@@ -23,43 +23,7 @@ const FriendDetails = () => {
             'on-track': 'badge bg-green-800 text-white badge-sm border-none px-4 py-3',
       };
 
-      const [storedCalls, setStoredCalls] = useState([]);
-      const [storedTexts, setStoredTexts] = useState([]);
-      const [storedVideos, setStoredVideos] = useState([]);
-      const handleCall = (id) => {
-            const isExistCall = storedCalls.find(call => call.id === id);
-            if (isExistCall) {
-                  toast.error('You have already called this friend!');
-                  return;
-            } else {
-                  setStoredCalls([...storedCalls, { id }]);
-                  toast.success('Call initiated!');
-            }
-
-      }
-
-      const handleText = (id) => {
-            const isExistText = storedTexts.find(text => text.id === id);
-            if (isExistText) {
-                  toast.error('You have already texted this friend!');
-                  return;
-            } else {
-                  setStoredTexts([...storedTexts, { id }]);
-                  toast.success('Text initiated!');
-            }
-
-      }
-      const handleVideo = (id) => {
-
-            const isExistVideo = storedVideos.find(video => video.id === id);
-            if (isExistVideo) {
-                  toast.error('You have already video called this friend!');
-                  return;
-            } else {
-                  setStoredVideos([...storedVideos, { id }]);
-                  toast.success('Video call initiated!');
-            }
-      }
+      const { handleCall, handleText, handleVideo } = useContext(FriendContext);
 
 
       return (
@@ -119,15 +83,15 @@ const FriendDetails = () => {
                                     </div>
 
                                     {/* Action Buttons */}
-                                    <button className="btn w-full justify-center">
+                                    <button className="btn w-full justify-center" onClick={() => handleCall(expectedFriend.id)}>
                                           <HiOutlineBellSnooze /> Snooze 2 Weeks
                                     </button>
 
-                                    <button className="btn  w-full justify-center">
+                                    <button className="btn  w-full justify-center" onClick={() => handleText(expectedFriend.id)}>
                                           <HiOutlineArchiveBox /> Archive
                                     </button>
 
-                                    <button className="btn  text-red-500 w-full justify-center">
+                                    <button className="btn  text-red-500 w-full justify-center" onClick={() => handleVideo(expectedFriend.id)}>
                                           <RiDeleteBin6Line /> Delete
                                     </button>
                               </div>
