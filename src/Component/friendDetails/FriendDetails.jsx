@@ -83,15 +83,15 @@ const FriendDetails = () => {
                                     </div>
 
                                     {/* Action Buttons */}
-                                    <button className="btn w-full justify-center" onClick={() => handleCall(expectedFriend.id)}>
+                                    <button className="btn w-full justify-center" >
                                           <HiOutlineBellSnooze /> Snooze 2 Weeks
                                     </button>
 
-                                    <button className="btn  w-full justify-center" onClick={() => handleText(expectedFriend.id)}>
+                                    <button className="btn  w-full justify-center" >
                                           <HiOutlineArchiveBox /> Archive
                                     </button>
 
-                                    <button className="btn  text-red-500 w-full justify-center" onClick={() => handleVideo(expectedFriend.id)}>
+                                    <button className="btn  text-red-500 w-full justify-center" >
                                           <RiDeleteBin6Line /> Delete
                                     </button>
                               </div>

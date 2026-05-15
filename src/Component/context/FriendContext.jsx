@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 
 export const FriendContext = createContext();
 
+
 const FriendProvider = ({ children }) => {
       const [storedCalls, setStoredCalls] = useState([]);
       const [storedTexts, setStoredTexts] = useState([]);
