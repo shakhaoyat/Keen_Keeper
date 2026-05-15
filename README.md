@@ -1,16 +1,27 @@
-# React + Vite
+# create/update README.md (here-doc; works in Git Bash / Linux / macOS)
+cat > README.md <<'EOF'
+# Keen Keeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight React app to manage, explore, and visualize friendships and interactions.
 
-Currently, two official plugins are available:
+## Short Description
+Keen Keeper helps you browse friends, view detailed timelines, and visualize interaction analytics (calls, texts, videos) with a simple, responsive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies
+- React (JSX, Context API)
+- Vite
+- Recharts
+- Tailwind CSS
+- JavaScript, HTML, CSS
 
-## React Compiler
+## Key Features
+- Interactive Friend List: Browse and filter friends with responsive cards and search.
+- Friend Details & Timeline: View individual friend profiles and activity timelines.
+- Friendship Analytics: Visual breakdown of calls, texts, and video interactions using charts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
+Install dependencies and run the dev server:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
