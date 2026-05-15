@@ -9,6 +9,7 @@ Keen Keeper helps you browse friends, view detailed timelines, and visualize int
 
 ## Technologies
 - React (JSX, Context API)
+- React Router
 - Vite
 - Recharts
 - Tailwind CSS
