@@ -1,5 +1,3 @@
-# create/update README.md (here-doc; works in Git Bash / Linux / macOS)
-cat > README.md <<'EOF'
 # Keen Keeper
 
 A lightweight React app to manage, explore, and visualize friendships and interactions.
